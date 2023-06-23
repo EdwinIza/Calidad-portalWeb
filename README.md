@@ -7,3 +7,4 @@
 - Para navegar entre versiones de Node.js, instale npm desde el siguiente enlace:
   Descargue el instalador nvm-setup.exe e instálelo desde: [Descargar nvm-setup.exe](https://github.com/coreybutler/nvm-windows/releases).
   Asegúrese de que esté instalado abriendo CMD y ejecutando el siguiente comando:
+nvm -v

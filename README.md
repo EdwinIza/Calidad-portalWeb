@@ -1,49 +1,63 @@
-Pasos para intalar proyecto ecommerce
+Guía de instalación del proyecto Portal WEB
 
-PREREQUISITOS:
--Para manejo de BD - Apache Mysql
-	https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.0.28/xampp-windows-x64-8.0.28-0-VS16-installer.exe/download
-	*Descargar Xaamp
+Esta guía proporciona los pasos necesarios para instalar y configurar correctamente el proyecto eCommerce.
+Requisitos previos
 
--Para navegar entre versiones de node - npm instalar del siguiente link:
+Antes de comenzar con la instalación, asegúrese de tener los siguientes requisitos previos instalados:
 
-	https://github.com/coreybutler/nvm-windows/releases
-	*Descargar el instalador nvm-setup.exe e instalarlo
-	*comprobar que este instalado abrir cmd y ejecutar: nvm -v
-	*listamos las versiones diponibles de node con el comando: nvm list available
-	*Instalamos la version 14.20.1 con el comando: nvm install 14.20.1
-	*Para usar la version ya instalada usamos el comando: nvm use 14.20.1
+    Apache MySQL para el manejo de la base de datos. Puede descargarlo desde el siguiente enlace: Descargar XAMPP.
 
-DEPENDENCIAS:
-node version 14.20.1
-angular sirve a partir de la version 15
+    NVM (Node Version Manager) para la gestión de versiones de Node.js. Puede descargar el instalador desde el siguiente enlace: Descargar nvm-setup.exe. Asegúrese de ejecutar el instalador y seguir las instrucciones.
 
-INSTALACION PROYECTO:
--Descargar el proyecto abrir con VScode la carpeta angular-ecommerce-app-master y ejecutar los comandos: 
-	* cd backend   -  para navegar a la carpeta backend
-	* npm install
-	* cd..	- para volver a la raiz
-	* cd client - para navegar a la carpeta client
-	* npm install
+Dependencias
 
--Crear Base de Datos en Mysql:
-	*Nombre de BD: myapp
-	*En la carpeta backend en la raiz encontrara el archivo sql_dump.sql abralo copie todo el codigo y
-	copielo en el apartado de ejecuciones de SQL para crear las tablas en la BD myapp.
+Asegúrese de tener las siguientes dependencias instaladas:
 
--CONFIGURACIONES PARA BD MYSQL
-	*En la carpeta backend navegar a la carpeta database al archivo db.js cambiar el siguiente codigo:
-	const connection = mysql.createConnection({
-  	  host: 'localhost',
-  	  user: 'root',
-  	  password: '',
-  	  database: 'myapp',
-	});
+    Node.js versión 14.20.1
+    Angular (se requiere la versión 15 o superior)
 
--Inicializacion de Proyecto
-	*Abra un terminal para backend
-	  Ejecute el comando: node app.js
-	*Abra un terminal para client
-	  Ejecute el comando: ng serve
+Instalación del proyecto
 
+Siga los pasos a continuación para instalar el proyecto eCommerce:
 
+    Descargue el proyecto y ábralo con VScode. Navegue hasta la carpeta "angular-ecommerce-app-master" y ejecute los siguientes comandos en una terminal:
+
+bash
+
+cd backend
+npm install
+cd ..
+cd client
+npm install
+
+    Crear la base de datos en MySQL. Utilice las siguientes configuraciones:
+        Nombre de la base de datos: myapp
+        En la carpeta "backend" en la raíz del proyecto, encontrará el archivo "sql_dump.sql". Ábralo y copie todo el código. Luego, péguelo en la sección de ejecución de SQL en su cliente de MySQL para crear las tablas necesarias en la base de datos "myapp".
+
+    Configuraciones para la base de datos MySQL:
+        Navegue hasta la carpeta "backend" y abra el archivo "db.js" ubicado en la carpeta "database". Cambie el siguiente código:
+
+    javascript
+
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: '',
+  database: 'myapp',
+});
+
+Inicialización del proyecto:
+
+    Abra una terminal para el backend y ejecute el siguiente comando:
+
+bash
+
+node app.js
+
+    Abra otra terminal para el cliente y ejecute el siguiente comando:
+
+bash
+
+    ng serve
+
+Con estos pasos, habrá instalado y configurado correctamente el proyecto eCommerce. Ahora puede comenzar a trabajar en el desarrollo del proyecto.
